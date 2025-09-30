@@ -29,10 +29,7 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-<<<<<<< HEAD
-=======
     text-decoration: none;
->>>>>>> master
 }
 
 .header-logo span {
@@ -40,11 +37,8 @@ body {
     line-height: 28px;
     font-size: 24px;
     margin-left: 6px;
-<<<<<<< HEAD
-=======
     text-decoration: none;
     color: rgba(10, 20, 58, 1);
->>>>>>> master
 }
 
 .header-burger {
@@ -70,11 +64,6 @@ body {
 .btn-primary {
     color: white;
     background-color: rgba(37, 110, 235, 1);
-<<<<<<< HEAD
-}
-
-
-=======
     transition: .3s all ease;
 }
 
@@ -151,20 +140,19 @@ body {
 }
 
 .content-main__list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    row-gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
 .content-main__list-item {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: calc((100% - 60px) / 3);
     border-radius: 10px;
     overflow: hidden;
     text-decoration: none;
+    width: 100%;
 }
 
 .content-main__list-item:hover .content-main__list-item--title {
@@ -305,18 +293,19 @@ body {
     padding: 19px 71px;
     font-size: 14px;
 }
->>>>>>> master
 
 @media (max-width: 1200px) {
     .container {
         max-width: 991px;
     }
-<<<<<<< HEAD
-=======
 
-    .content-main__list-item {
-        width: calc((100% - 30px) / 2);
+    .content-main__list {
+        grid-template-columns: repeat(2, 1fr);
     }
+
+    /* .content-main__list-item {
+        width: calc((100% - 30px) / 2);
+    } */
 }
 
 @media (max-width: 991px) {
@@ -350,7 +339,6 @@ body {
         flex-basis: 100%;
         width: 100%;
     }
->>>>>>> master
 }
 
 @media (max-width: 768px) {
@@ -365,17 +353,21 @@ body {
     .header-burger {
         display: block;
     }
-<<<<<<< HEAD
-=======
 
     .search-btn .search-btn__text {
         display: none;
     }
 }
 
-@media (max-width: 480px) {
-    .content-main__list-item {
-        width: 100px;
+@media (max-width: 468px) {
+    .content-main__list {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
     }
->>>>>>> master
+
+    .content-main__list-item {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
 }
